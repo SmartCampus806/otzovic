@@ -1,0 +1,27 @@
+{"timestamp":"2025-05-20T13:46:20.457649","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-05-20T13:46:20.458210","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/parser/dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-05-20T13:46:20.616687","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=kafka1:9092 <connecting> [IPv4 ('172.28.0.11', 9092)]>: connecting to kafka1:9092 [('172.28.0.11', 9092) IPv4]","logger":"kafka.conn"}
+{"timestamp":"2025-05-20T13:46:20.640864","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=kafka1:9092 <checking_api_versions_recv> [IPv4 ('172.28.0.11', 9092)]>: Broker version identified as 2.6","logger":"kafka.conn"}
+{"timestamp":"2025-05-20T13:46:20.641850","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=kafka1:9092 <connected> [IPv4 ('172.28.0.11', 9092)]>: Connection complete.","logger":"kafka.conn"}
+{"timestamp":"2025-05-20T13:46:20.678892Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-20T13:46:20.679029Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-20T13:46:20.679081Z","level":"info","event":"Current task name:send_to_kafka","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-20T13:46:20.679125Z","level":"info","event":"Dag name:data_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-20T13:46:20.748787","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=kafka2:9093 <connecting> [IPv4 ('172.28.0.12', 9093)]>: connecting to kafka2:9093 [('172.28.0.12', 9093) IPv4]","logger":"kafka.conn"}
+{"timestamp":"2025-05-20T13:46:20.749158","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=kafka2:9093 <connected> [IPv4 ('172.28.0.12', 9093)]>: Connection complete.","logger":"kafka.conn"}
+{"timestamp":"2025-05-20T13:46:20.749298","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=kafka1:9092 <connected> [IPv4 ('172.28.0.11', 9092)]>: Closing connection. ","logger":"kafka.conn"}
+{"timestamp":"2025-05-20T13:46:21.147891","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}
+{"timestamp":"2025-05-20T13:46:21.170163Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-20T13:46:21.170463Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-20T13:46:21.170635Z","level":"info","event":"Task operator:<Task(PythonOperator): send_to_kafka>","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-20T13:46:21.170811Z","level":"error","event":"Exception ignored in atexit callback: <function KafkaProducer._cleanup_factory.<locals>.wrapper at 0x7fd6e2585da0>","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-20T13:46:21.170975Z","level":"error","event":"Traceback (most recent call last):","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-20T13:46:21.171132Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/kafka/producer/kafka.py\", line 575, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-20T13:46:21.171283Z","level":"error","event":"    _self.close(timeout=0, null_logger=True)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-20T13:46:21.171448Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/kafka/producer/kafka.py\", line 630, in close","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-20T13:46:21.171602Z","level":"error","event":"    self.flush(timeout)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-20T13:46:21.171761Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/kafka/producer/kafka.py\", line 919, in flush","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-20T13:46:21.171908Z","level":"error","event":"    self._accumulator.await_flush_completion(timeout=timeout)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-20T13:46:21.172055Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/kafka/producer/record_accumulator.py\", line 586, in await_flush_completion","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-20T13:46:21.172200Z","level":"error","event":"    raise Errors.KafkaTimeoutError('Timeout waiting for future')","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-20T13:46:21.172345Z","level":"error","event":"kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Timeout waiting for future","chan":"stderr","logger":"task"}

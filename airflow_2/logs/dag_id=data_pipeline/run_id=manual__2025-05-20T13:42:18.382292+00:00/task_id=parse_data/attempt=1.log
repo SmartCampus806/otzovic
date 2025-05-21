@@ -1,0 +1,15 @@
+{"timestamp":"2025-05-20T13:42:23.974126","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-05-20T13:42:23.976275","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/parser/dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-05-20T13:42:24.445394","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka1:29092 <connecting> [IPv4 ('172.28.0.11', 29092)]>: connecting to kafka1:29092 [('172.28.0.11', 29092) IPv4]","logger":"kafka.conn"}
+{"timestamp":"2025-05-20T13:42:24.450657","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka1:29092 <checking_api_versions_recv> [IPv4 ('172.28.0.11', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn"}
+{"timestamp":"2025-05-20T13:42:24.454855","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka1:29092 <connected> [IPv4 ('172.28.0.11', 29092)]>: Connection complete.","logger":"kafka.conn"}
+{"timestamp":"2025-05-20T13:42:25.241558Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-20T13:42:25.241702Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-20T13:42:25.241756Z","level":"info","event":"Current task name:parse_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-20T13:42:25.241799Z","level":"info","event":"Dag name:data_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-20T13:42:25.241841Z","level":"info","event":"Parsed data: ['item1', 'item2', 'item3']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-20T13:42:25.241882Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-20T13:42:25.241923Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-20T13:42:25.241963Z","level":"info","event":"Task operator:<Task(PythonOperator): parse_data>","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-20T13:42:24.533607","level":"info","event":"Done. Returned value was: ['item1', 'item2', 'item3']","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}
+{"timestamp":"2025-05-20T13:42:24.533849","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('0196edee-482f-7365-b9b6-c43104d7bf43'), task_id='parse_data', dag_id='data_pipeline', run_id='manual__2025-05-20T13:42:18.382292+00:00', try_number=1, map_index=-1, hostname='5fe64c6b0308', context_carrier={}, task=<Task(PythonOperator): parse_data>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=0, start_date=datetime.datetime(2025, 5, 20, 13, 42, 21, 143859, tzinfo=TzInfo(UTC)), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task"}
