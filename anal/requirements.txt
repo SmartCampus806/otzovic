@@ -1,0 +1,5 @@
+FastAPI
+clickhouse-connect
+pandas
+xlsxwriter
+uvicorn
